@@ -1,5 +1,6 @@
 describe('e2e test saucedemo', function(){
     it('success', function(){
+        
         //visit website
         cy.visit('https://www.saucedemo.com');
 
@@ -19,8 +20,8 @@ describe('e2e test saucedemo', function(){
         cy.xpath(`//button[@data-test='checkout']`).click();
 
         // customer data
-        cy.xpath(`//input[@data-test='firstName']`).type('first');
-        cy.xpath(`//input[@data-test='lastName']`).type('name alisa');
+        cy.xpath(`//input[@data-test='firstName']`).type('fathi');
+        cy.xpath(`//input[@data-test='lastName']`).type('babe');
         cy.xpath(`//input[@data-test='postalCode']`).type('1234321');
         cy.xpath(`//input[@data-test='continue']`).click();
 
@@ -29,6 +30,9 @@ describe('e2e test saucedemo', function(){
         
         // order complete
         cy.xpath(`//button[@data-test='back-to-products']`).click();
+        cy.xpath(`//button[@id='react-burger-menu-btn']`).click();
+        cy.xpath(`//a[@data-test='logout-sidebar-link']`).click();
+
 
 
         
