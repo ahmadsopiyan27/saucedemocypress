@@ -2,7 +2,7 @@ describe('e2e test saucedemo', function(){
     it('success', function(){
         
         //visit website
-        cy.visit('/');
+        cy.visit('https://www.saucedemo.com');
 
         //login
         cy.xpath(`//input[@data-test='username']`).type('visual_user');
