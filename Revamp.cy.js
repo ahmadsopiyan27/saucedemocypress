@@ -1,5 +1,3 @@
-const cypress = require("cypress");
-
 describe('e2e test saucedemo', function(){
     it('success', function(){
         
@@ -7,8 +5,8 @@ describe('e2e test saucedemo', function(){
         cy.visit('https://www.saucedemo.com');
 
         //login
-        cy.xpath(`//input[@data-test='username']`).type(Cypress.env('STANDARD_USERNAME'))      
-        cy.xpath(`//input[@data-test='password']`).type(cypress.env('STANDARD_PASSWORD'))
+        cy.xpath(`//input[@data-test='username']`).type('visual_user');
+        cy.xpath(`//input[@data-test='password']`).type('secret_sauce');
         cy.xpath(`//input[@data-test='login-button']`).click();
         
         //add item to cart
